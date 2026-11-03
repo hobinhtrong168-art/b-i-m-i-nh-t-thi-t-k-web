@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hồ Bình Trọng – Hồ sơ cá nhân</title>
+<meta name="description" content="Hồ sơ cá nhân của Hồ Bình Trọng, sinh viên công nghệ thông tin.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="space" aria-hidden="true"></canvas>
+<div id="progress"></div>
+<header class="nav">
+  <a class="logo" href="#home">Trọng<span>.dev</span></a>
+  <nav id="menu" aria-label="Điều hướng chính">
+    <a href="#about">Giới thiệu</a><a href="#skills">Kỹ năng</a><a href="#education">Học vấn</a><a href="#goals">Mục tiêu</a><a href="#awards">Sở thích</a><a href="#projects">Dự án</a><a href="#lab">Thử thách</a><a href="#contact">Liên hệ</a>
+  </nav>
+  <div class="tools"><span id="accents" class="accents" role="group" aria-label="Chọn màu chủ đạo"></span>
+    <button id="spaceBtn" class="chip" aria-label="Bật/tắt nền vũ trụ" aria-pressed="true">🌌</button><button id="langBtn" class="chip" aria-label="Đổi ngôn ngữ Việt/Anh">EN</button><button id="paletteBtn" class="chip" aria-label="Mở bảng lệnh">Ctrl K</button>
+    <button id="themeBtn" class="chip" aria-label="Đổi giao diện sáng/tối">🌙</button>
+    <button id="burger" class="chip burger" aria-label="Mở menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main>
+<section id="home" class="hero">
+    <div class="wrap hero-grid">
+    <div>
+      <p class="hello" id="greet">Xin chào, mình là</p>
+      <h1>Hồ Bình Trọng</h1>
+      <p class="role"><span id="typed"></span><i class="caret"></i></p>
+      <p class="goal"><b>Mục tiêu:</b> trở thành lập trình viên Java/Web vững nền tảng OOP, làm ra sản phẩm chạy được và dễ bảo trì.</p>
+      <div class="btns"><a class="btn" href="#about">Tìm hiểu về mình</a><a class="btn ghost" href="#contact">Liên hệ mình</a><button class="btn ghost" id="printBtn" type="button">Lưu hồ sơ PDF</button></div>
+    </div>
+    <div class="me">
+      <div class="ring"><span class="ph" aria-hidden="true">HT</span><img src="images/avatar.png" alt="Ảnh đại diện của Hồ Bình Trọng" onerror="this.style.display='none'"></div>
+      <pre class="code" aria-label="Đoạn mã giới thiệu"><code><b>class</b> HoBinhTrong <b>extends</b> SinhVien {
+  String muctieu = "Java Developer";
+  <b>void</b> hocMoiNgay() { code(); }
+}</code></pre>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="sec wrap">
+  <h2>Giới thiệu bản thân</h2>
+  <div class="two">
+    <div>
+      <p>Mình là <b>Hồ Bình Trọng</b>, sinh viên ngành Công nghệ thông tin. Mình thích hiểu vì sao một thứ chạy được rồi tự tay làm ra nó, từ một trang web nhỏ đến một cơ sở dữ liệu cho cửa hàng sách.</p>
+      <p>Hiện mình đang tự học Java và lập trình hướng đối tượng theo lộ trình 6 giai đoạn, mỗi ngày học một chút để nền tảng chắc dần.</p>
+      <ul class="stats">
+        <li><b data-count="6">0</b><span>giai đoạn lộ trình Java</span></li>
+        <li><b data-count="4">0</b><span>ngôn ngữ/công nghệ</span></li>
+        <li><b data-count="2">0</b><span>dự án đã làm</span></li>
+      </ul>
+    </div>
+    <dl class="facts">
+      <dt>Họ tên</dt><dd>Hồ Bình Trọng</dd>
+      <dt>Vai trò</dt><dd>Sinh viên Công nghệ thông tin</dd>
+      <dt>Trường</dt><dd><mark>TRƯỜNG ĐẠI HỌC BÌNH DƯƠNG (BDU)</mark></dd>
+      <dt>Ngày sinh</dt><dd><mark>8/7/2007</mark></dd>
+      <dt>Quê quán</dt><dd><mark>THÀNH PHỐ HỒ CHÍ MINH </mark></dd>
+      <dt>Đang học</dt><dd>Java, OOP, thiết kế web, cơ sở dữ liệu</dd>
+      <dt>Tính cách</dt><dd>Kiên trì, thích thử và sửa lỗi <mark>...</mark></dd>
+    </dl>
+  </div>
+</section>
+
+<section id="skills" class="sec wrap">
+  <h2>Kỹ năng chuyên môn</h2>
+  <div class="two"><div class="bars">
+    <div class="bar" data-level="80"><span>HTML</span><i></i><em>80%</em></div>
+    <div class="bar" data-level="70"><span>CSS</span><i></i><em>70%</em></div>
+    <div class="bar" data-level="60"><span>JavaScript</span><i></i><em>60%</em></div>
+    <div class="bar" data-level="55"><span>Java</span><i></i><em>55%</em></div>
+    <div class="bar" data-level="50"><span>SQL / CSDL</span><i></i><em>50%</em></div>
+  </div><canvas id="radar" width="380" height="380" role="img" aria-label="Biểu đồ radar kỹ năng"></canvas></div>
+  <p class="note">Mức độ là tự đánh giá và sẽ tăng theo từng dự án.</p>
+</section>
+
+<section id="education" class="sec wrap">
+  <h2>Học vấn và kinh nghiệm</h2>
+  <ol class="timeline">
+    <li><h3>Sinh viên Công nghệ thông tin</h3><p>Trường: <mark>ĐẠI HỌC BÌNH DƯƠNG (BDU)</mark> – các môn thiết kế web (INF0823), cơ sở dữ liệu, lập trình.</p></li>
+    <li><h3>Tiểu luận cơ sở dữ liệu</h3><p>Thiết kế ERD, lược đồ quan hệ và dữ liệu mẫu cho hệ thống quản lý mua bán sách.</p></li>
+    <li><h3>Tự học Java và OOP</h3><p>Theo lộ trình 6 giai đoạn, từ cú pháp cơ bản đến các nguyên lý hướng đối tượng.</p></li>
+  </ol>
+</section>
+
+<section id="goals" class="sec wrap">
+  <h2>Mục tiêu học tập</h2>
+  <ol class="timeline">
+    <li><h3>Ngắn hạn</h3><p>Hoàn thành lộ trình Java OOP 6 giai đoạn và làm đủ bài tập thực hành.</p></li>
+    <li><h3>Trung hạn</h3><p>Làm một ứng dụng Java kết nối cơ sở dữ liệu quản lý mua bán sách.</p></li>
+    <li><h3>Dài hạn</h3><p>Trở thành lập trình viên Java/Web làm được sản phẩm hoàn chỉnh. <mark>...</mark></p></li>
+  </ol>
+</section>
+
+<section id="roadmap" class="sec wrap">
+  <h2>Tiến độ lộ trình Java OOP</h2>
+  <div class="two">
+    <div class="ringbox"><svg viewBox="0 0 120 120" class="pring" role="img" aria-label="Vòng tiến độ lộ trình"><circle cx="60" cy="60" r="52" class="rbg"/><circle id="rfg" cx="60" cy="60" r="52" class="rfg"/></svg><b id="rpct">0%</b></div>
+    <ol id="rlist" class="rlist"></ol>
+  </div>
+  <p class="note">Bấm vào từng giai đoạn để đánh dấu hoàn thành (lưu trên máy bạn). <mark>...</mark></p>
+</section>
+
+<section id="faq" class="sec wrap">
+  <h2>Hỏi nhanh về mình</h2>
+  <div class="faq">
+    <details><summary>Bạn đang học gì?</summary><p>Mình đang học thiết kế web (HTML, CSS, JavaScript), cơ sở dữ liệu và tự học Java cùng lập trình hướng đối tượng.</p></details>
+    <details><summary>Bạn muốn làm công việc gì?</summary><p>Mình muốn trở thành lập trình viên Java hoặc Web, làm ra sản phẩm chạy được và dễ bảo trì.</p></details>
+    <details><summary>Làm sao để liên hệ với bạn?</summary><p>Bạn dùng form ở mục Liên hệ, hoặc nhấn Ctrl+K rồi chọn "Sao chép email".</p></details>
+  </div>
+</section>
+
+<section id="awards" class="sec wrap">
+  <h2>Sở thích, chứng chỉ và giải thưởng</h2>
+  <div class="two">
+    <div><h3>Sở thích</h3><p>Lập trình, chơi game, khám phá công cụ mới và xem người khác giải thích cách một thứ hoạt động.</p></div>
+    <div><h3>Chứng chỉ / giải thưởng</h3><p>Chưa có. Đang chuẩn bị chứng chỉ Java cơ bản.</p></div>
+  </div>
+</section>
+
+<section id="projects" class="sec wrap">
+  <h2>Dự án cá nhân</h2>
+  <p class="note">Các dự án nhỏ mình đã làm trong quá trình học.</p>
+  <div class="grid">
+    <article class="card" data-cat="db" data-title="Quản lý mua bán sách" data-desc="Tiểu luận giữa kỳ môn Cơ sở dữ liệu (đề tài số 8): ERD Chen dựng từng bước với 9 thực thể và 8 mối quan hệ, lược đồ quan hệ 12 bảng, bộ SQL chạy được kèm dữ liệu mẫu và 6 truy vấn thống kê. Làm theo nhóm 4 người." data-tech="ERD Chen, SQL, SQLite, Lược đồ quan hệ" data-link="projects/quan-ly-sach/index.html">
+      <img src="images/db.svg" alt="Sơ đồ ERD dự án quản lý mua bán sách"><h3>Quản lý mua bán sách</h3><p>ERD Chen, 12 bảng, SQL và 6 truy vấn.</p><button class="more">Chi tiết</button>
+    </article>
+    <article class="card" data-cat="java" data-title="Java OOP: Bài tập và Đa game" data-desc="Bài thực hành bốn tính chất OOP và bộ 9 trò chơi terminal có bảng điểm chung (Đoán số, Oẳn tù tì, Cờ 3x3 với máy, Tính nhanh, Treo cổ, Cao thấp, Nhớ dãy số, Xúc xắc, Bắn chữ). Cả 9 game chơi được ngay trên web, có bảng điểm lưu trên trình duyệt. Mỗi game có trang riêng kèm hiệu ứng nền, mã nguồn và điểm OOP." data-tech="Java, OOP, Template Method" data-link="projects/da-game/index.html">
+      <img src="images/java.svg" alt="Biểu tượng tách cà phê Java"><h3>Java OOP: Đa game</h3><p>9 game chơi được ngay trên web.</p><button class="more">Chi tiết</button>
+    </article>
+  </div>
+</section>
+
+
+<section id="lab" class="sec wrap">
+  <h2>Khu thử thách</h2>
+  <p class="note">Ba món nhỏ để chơi thử: đố vui OOP, đồng hồ học tập và terminal hỏi đáp về mình.</p>
+  <div class="labgrid">
+    <div class="box"><h3>Đố vui Java OOP</h3><div id="quiz"></div></div>
+    <div class="box"><h3>Đồng hồ học tập</h3>
+      <p id="clock" class="clock">25:00</p>
+      <div class="btns"><button class="chip on" id="pStart">Bắt đầu</button><button class="chip" id="pMode">Chuyển 5 phút nghỉ</button><button class="chip" id="pReset">Đặt lại</button></div>
+      <p class="note" id="pCount"></p></div>
+    <div class="box"><h3>Thử gõ nhanh</h3><p id="tsent" class="tsent"></p><input id="tty" aria-label="Gõ lại câu trên" placeholder="Gõ lại câu trên rồi nhấn Enter" autocomplete="off"><p class="note" id="tres"></p></div>
+    <div class="box"><h3>Lật thẻ công nghệ</h3><div class="memg" id="memg"></div><p class="note" id="memi"></p></div>
+    <div class="box"><h3>Mẹo lập trình mỗi ngày</h3><p id="tip" class="tsent"></p><div class="btns"><button class="chip on" id="tipBtn" type="button">Mẹo khác</button><button class="chip" id="sndBtn" type="button" aria-pressed="false">Bật nhạc nền học bài</button></div></div>
+    <div class="box wide"><h3>Chạy thử HTML ngay trên trang</h3><textarea id="pgIn" rows="6" spellcheck="false" aria-label="Soạn mã HTML"></textarea><iframe id="pgOut" title="Kết quả chạy thử" sandbox="allow-scripts"></iframe></div>
+    <div class="box wide"><h3>Điều khiển vũ trụ</h3>
+      <div class="ctl"><label>Tốc độ<input type="range" id="spd" min="0" max="5" step=".1" value="1"></label><label class="ck"><input type="checkbox" id="ckBH" checked> Hố đen</label><label class="ck"><input type="checkbox" id="ckOrb" checked> Quỹ đạo</label><label class="ck"><input type="checkbox" id="ckLbl"> Tên hành tinh</label><button class="chip on" id="shootBtn" type="button">Sao băng</button></div>
+      <label>Chọn hành tinh để làm nổi bật<select id="planetSel"><option value="-1">Không chọn</option></select></label><p id="pInfo" class="note"></p>
+      <label>Cân nặng của bạn (kg)<input id="kg" type="number" min="1" max="300" value="50"></label><ul id="wlist" class="wlist" aria-live="polite"></ul>
+    </div>
+  </div>
+  <div class="term" id="term"><div id="tout" aria-live="polite"></div><div class="tline"><span>hobinhtrong168@gamil.com</span><input id="tin" aria-label="Nhập lệnh terminal" autocomplete="off" placeholder="gõ help rồi nhấn Enter"></div></div>
+</section>
+
+<section id="badges" class="sec wrap">
+  <h2>Huy hiệu khám phá</h2>
+  <p class="note" id="bcount"></p>
+  <div id="bgrid" class="bgrid"></div>
+</section>
+
+<section id="contact" class="sec wrap">
+  <h2>Liên hệ</h2>
+  <div class="two">
+    <div>
+      <p>Có góp ý hoặc muốn hợp tác? Gửi lời nhắn, mình sẽ trả lời sớm.</p>
+      <p>Email: <a id="mail" href="hobinhtrong168@gmail.com">ten@email.com</a> <mark></mark></p>
+      <p>GitHub: <a href="https://github.com/" target="_blank" rel="noopener"><hobinhtrong168-art></hobinhtrong168-art></a> <mark></mark></p>
+      <button id="vcfBtn" class="btn ghost" type="button">Lưu danh bạ (.vcf)</button>
+    </div>
+    <form id="form" novalidate>
+      <label>Họ tên<input name="name" autocomplete="name"><small></small></label>
+      <label>Email<input name="email" type="email" autocomplete="email"><small></small></label>
+      <label>Lời nhắn<textarea name="msg" rows="4"></textarea><small></small></label>
+      <button class="btn" type="submit">Gửi lời nhắn</button>
+      <p id="ok" role="status"></p>
+    </form>
+  </div>
+</section>
+<section id="guest" class="sec wrap">
+  <h2>Sổ lưu bút</h2>
+  <p class="note">Để lại lời nhắn cho mình. Lời nhắn chỉ lưu trên trình duyệt của bạn.</p>
+  <div class="two">
+    <form id="gform" novalidate><label>Tên<input name="gn" maxlength="40"></label><label>Lời nhắn<textarea name="gt" rows="3" maxlength="200"></textarea></label><button class="btn" type="submit">Ký tên</button></form>
+    <div id="glist"></div>
+  </div>
+</section>
+</main>
+
+<footer><p>© 2026 Hồ Bình Trọng · Hồ sơ cá nhân · Bài giữa kỳ INF0823</p><p id="visit" class="note"></p><button id="shareBtn" class="chip" type="button">Chia sẻ trang</button></footer>
+<button id="top" aria-label="Lên đầu trang">↑</button>
+
+<nav id="dots" aria-label="Mục lục nhanh"></nav>
+<canvas id="confetti" aria-hidden="true"></canvas><div id="toast" role="status"></div>
+<dialog id="modal"><button class="x" aria-label="Đóng">×</button><img alt=""><h3></h3><p class="d"></p><p><b>Công nghệ:</b> <span class="t"></span></p><a class="btn" target="_self">Mở dự án</a></dialog>
+
+<dialog id="palette"><input id="q" placeholder="Gõ lệnh: đi tới dự án, đổi giao diện…" aria-label="Tìm lệnh"><ul id="cmds"></ul></dialog>
+<script src="js/main.js"></script>
+<script src="js/extras.js"></script>
+<script src="js/more.js"></script>
+<script src="js/plus.js"></script>
+<script src="js/space.js"></script>
+<script src="js/finale.js"></script>
+<script src="js/scenes.js"></script>
+<script src="js/music-config.js"></script>
+<script src="js/bar.js"></script>
+<script src="js/music.js"></script>
+</body>
+</html>
